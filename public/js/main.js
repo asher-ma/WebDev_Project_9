@@ -21,22 +21,39 @@ function loadData(dataSet) {
     .then((data) => generateTableBody(data));
 }
 
+function generateTableHead(data) {
+  keys = Object.keys(data[0])
+  tableHead = document.getElementById("tableHead")
+  tableRow = document.createElement("tr")
+  for (let i = 0; i < keys.length; i++) {
+    generateAppendCell(keys[i], tableRow, "th")
+  }
+  tableHead.appendChild(tableRow)
+}
+
 function generateTableBody(data) {
-  console.log(Object.keys(data[0]));
   keys = Object.keys(data[0])
   tableBody = document.getElementById("tableContent");
   for (let i = 0; i < data.length; i++) {
     tableRow = document.createElement("tr");
-    generateAppendCell(data[i].keys[0], tableRow);
-    generateAppendCell(data[i].keys[1], tableRow);
-    generateAppendCell(data[i].keys[2].join(", "), tableRow);
-    generateAppendCell(data[i].keys[3], tableRow);
+    generateAppendCell(data[i].keys[0], tableRow, "td");
+    generateAppendCell(data[i].keys[1], tableRow, "td");
+    // if (data == "students") {
+    //   generateAppendCell(data[i].keys[2].join(", "), tableRow, "td");
+    // } else {
+    //   generateAppendCell(data[i].keys[2], tableRow, "td");
+    // }
+    generateAppendCell(data[i].keys[2].join(", "), tableRow, "td");
+    generateAppendCell(data[i].keys[3], tableRow, "td");
+    // if (data == "movies") {
+    //   generateAppendCell(data[i].keys[4].join(", "), tableRow, "td");
+    // }
     tableBody.appendChild(tableRow);
   }
 }
 
-function generateAppendCell(text, parentElement) {
-  childElement = document.createElement("td");
+function generateAppendCell(text, parentElement, cellType) {
+  childElement = document.createElement(cellType);
   childElement.innerHTML = text;
   parentElement.appendChild(childElement);
 }
