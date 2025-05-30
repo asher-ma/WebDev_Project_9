@@ -1,9 +1,11 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-// TODO: export the other data variables in data.js,
-// then import the data here
+
 import { students } from "./api/data.js";
+import { videogames } from "./api/data.js";
+import { movies } from "./api/data.js";
+import { bendRestaurants } from "./api/data.js";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -17,8 +19,18 @@ app.get("/api/students", (req, res) => {
   res.send(students);
 });
 
-// TODO:
-// add new app.get for games, movies, and restaurants
+app.get("/api/students", (req, res) => {
+  res.send(videogames);
+});
+
+app.get("/api/students", (req, res) => {
+  res.send(movies);
+});
+
+app.get("/api/students", (req, res) => {
+  res.send(bendRestaurants);
+});
+
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);

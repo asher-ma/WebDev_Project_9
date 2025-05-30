@@ -61,7 +61,7 @@ export const students = [
   },
 ];
 
-const videoGames = [
+export const videoGames = [
   {
     title: "The Legend of Zelda: Breath of the Wild",
     releaseYear: 2017,
@@ -114,7 +114,7 @@ const videoGames = [
   },
 ];
 
-const movies = [
+export const movies = [
   {
     name: "Inception",
     year: 2010,
@@ -187,7 +187,7 @@ const movies = [
   },
 ];
 
-const bendRestaurants = [
+export const bendRestaurants = [
   {
     name: "Spork",
     typeOfFood: "Fusion",
