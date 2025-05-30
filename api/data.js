@@ -1,0 +1,251 @@
+export const students = [
+  {
+    name: "Alice Johnson",
+    major: "Computer Science",
+    clubs: ["Coding Club", "Chess Club"],
+    gpa: 3.8,
+  },
+  {
+    name: "Brian Smith",
+    major: "Biology",
+    clubs: ["Biology Society", "Hiking Club"],
+    gpa: 3.6,
+  },
+  {
+    name: "Catherine Lee",
+    major: "Mathematics",
+    clubs: ["Math Club", "Robotics Club"],
+    gpa: 3.9,
+  },
+  {
+    name: "David Kim",
+    major: "History",
+    clubs: ["History Club", "Debate Club"],
+    gpa: 3.7,
+  },
+  {
+    name: "Eva Patel",
+    major: "Psychology",
+    clubs: ["Psychology Club", "Yoga Club"],
+    gpa: 3.5,
+  },
+  {
+    name: "Frank Wright",
+    major: "Physics",
+    clubs: ["Physics Club", "Astronomy Club"],
+    gpa: 3.8,
+  },
+  {
+    name: "Grace Liu",
+    major: "English",
+    clubs: ["Literature Club", "Drama Club"],
+    gpa: 3.4,
+  },
+  {
+    name: "Henry Brown",
+    major: "Economics",
+    clubs: ["Economics Club", "Investment Club"],
+    gpa: 3.7,
+  },
+  {
+    name: "Isabella Martinez",
+    major: "Art",
+    clubs: ["Art Club", "Photography Club"],
+    gpa: 3.6,
+  },
+  {
+    name: "Jack Wilson",
+    major: "Engineering",
+    clubs: ["Engineering Club", "Robotics Club"],
+    gpa: 3.9,
+  },
+];
+
+const videoGames = [
+  {
+    title: "The Legend of Zelda: Breath of the Wild",
+    releaseYear: 2017,
+    system: "Nintendo Switch",
+    reviewScore: 97,
+  },
+  {
+    title: "God of War",
+    releaseYear: 2018,
+    system: "PlayStation 4",
+    reviewScore: 94,
+  },
+  {
+    title: "Red Dead Redemption 2",
+    releaseYear: 2018,
+    system: "PlayStation 4",
+    reviewScore: 97,
+  },
+  {
+    title: "The Witcher 3: Wild Hunt",
+    releaseYear: 2015,
+    system: "PC",
+    reviewScore: 93,
+  },
+  {
+    title: "Super Mario Odyssey",
+    releaseYear: 2017,
+    system: "Nintendo Switch",
+    reviewScore: 97,
+  },
+  { title: "Celeste", releaseYear: 2018, system: "PC", reviewScore: 92 },
+  {
+    title: "Sekiro: Shadows Die Twice",
+    releaseYear: 2019,
+    system: "PlayStation 4",
+    reviewScore: 90,
+  },
+  { title: "Hades", releaseYear: 2020, system: "PC", reviewScore: 93 },
+  {
+    title: "Animal Crossing: New Horizons",
+    releaseYear: 2020,
+    system: "Nintendo Switch",
+    reviewScore: 90,
+  },
+  {
+    title: "Ghost of Tsushima",
+    releaseYear: 2020,
+    system: "PlayStation 4",
+    reviewScore: 91,
+  },
+];
+
+const movies = [
+  {
+    name: "Inception",
+    year: 2010,
+    genre: "Sci-Fi",
+    director: "Christopher Nolan",
+    starringActors: ["Leonardo DiCaprio", "Joseph Gordon-Levitt"],
+  },
+  {
+    name: "The Shawshank Redemption",
+    year: 1994,
+    genre: "Drama",
+    director: "Frank Darabont",
+    starringActors: ["Tim Robbins", "Morgan Freeman"],
+  },
+  {
+    name: "The Godfather",
+    year: 1972,
+    genre: "Crime",
+    director: "Francis Ford Coppola",
+    starringActors: ["Marlon Brando", "Al Pacino"],
+  },
+  {
+    name: "The Dark Knight",
+    year: 2008,
+    genre: "Action",
+    director: "Christopher Nolan",
+    starringActors: ["Christian Bale", "Heath Ledger"],
+  },
+  {
+    name: "Pulp Fiction",
+    year: 1994,
+    genre: "Crime",
+    director: "Quentin Tarantino",
+    starringActors: ["John Travolta", "Samuel L. Jackson"],
+  },
+  {
+    name: "Forrest Gump",
+    year: 1994,
+    genre: "Drama",
+    director: "Robert Zemeckis",
+    starringActors: ["Tom Hanks", "Robin Wright"],
+  },
+  {
+    name: "Fight Club",
+    year: 1999,
+    genre: "Drama",
+    director: "David Fincher",
+    starringActors: ["Brad Pitt", "Edward Norton"],
+  },
+  {
+    name: "The Matrix",
+    year: 1999,
+    genre: "Sci-Fi",
+    director: "The Wachowskis",
+    starringActors: ["Keanu Reeves", "Laurence Fishburne"],
+  },
+  {
+    name: "The Lord of the Rings: The Return of the King",
+    year: 2003,
+    genre: "Fantasy",
+    director: "Peter Jackson",
+    starringActors: ["Elijah Wood", "Viggo Mortensen"],
+  },
+  {
+    name: "Gladiator",
+    year: 2000,
+    genre: "Action",
+    director: "Ridley Scott",
+    starringActors: ["Russell Crowe", "Joaquin Phoenix"],
+  },
+];
+
+const bendRestaurants = [
+  {
+    name: "Spork",
+    typeOfFood: "Fusion",
+    averageCost: "$$",
+    yelpReviewScore: 4.5,
+  },
+  {
+    name: "Wild Rose Northern Thai Eats",
+    typeOfFood: "Thai",
+    averageCost: "$$",
+    yelpReviewScore: 4.7,
+  },
+  {
+    name: "Ariana Restaurant",
+    typeOfFood: "American",
+    averageCost: "$$$$",
+    yelpReviewScore: 4.6,
+  },
+  {
+    name: "Jackson's Corner",
+    typeOfFood: "American",
+    averageCost: "$$",
+    yelpReviewScore: 4.4,
+  },
+  {
+    name: "Bangers & Brews",
+    typeOfFood: "Gastropub",
+    averageCost: "$$",
+    yelpReviewScore: 4.6,
+  },
+  {
+    name: "The Blacksmith Restaurant",
+    typeOfFood: "Steakhouse",
+    averageCost: "$$$$",
+    yelpReviewScore: 4.3,
+  },
+  {
+    name: "McKay Cottage Restaurant",
+    typeOfFood: "Breakfast & Brunch",
+    averageCost: "$$",
+    yelpReviewScore: 4.7,
+  },
+  {
+    name: "10 Barrel Brewing Co.",
+    typeOfFood: "Brewpub",
+    averageCost: "$$",
+    yelpReviewScore: 4.3,
+  },
+  {
+    name: "Chow",
+    typeOfFood: "Breakfast & Brunch",
+    averageCost: "$$",
+    yelpReviewScore: 4.4,
+  },
+  {
+    name: "Zydeco Kitchen & Cocktails",
+    typeOfFood: "Cajun/Creole",
+    averageCost: "$$$",
+    yelpReviewScore: 4.6,
+  },
+];

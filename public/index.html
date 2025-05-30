@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Page</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="custom-select-container">
+        <select
+          id="dataSelect"
+          onclick="handleSelectChange()"
+          class="custom-select"
+        >
+          <option value="" disabled selected>Select an option</option>
+          <option value="students">Students</option>
+          <option value="games">Video Games</option>
+          <option value="movies">Movies</option>
+          <option value="restaurants">Bend Restaurants</option>
+        </select>
+      </div>
+      <h3 class="title">My Table</h3>
+      <table class="myTable">
+        <thead>
+          <!-- TODO: Generate these headers dynamically -->
+          <tr>
+            <th>Name</th>
+            <th>Major</th>
+            <th>Clubs</th>
+            <th>GPA</th>
+          </tr>
+        </thead>
+        <tbody id="tableContent"></tbody>
+      </table>
+    </div>
+  </body>
+</html>
