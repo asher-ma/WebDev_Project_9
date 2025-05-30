@@ -26,8 +26,7 @@ function generateTableHead(data) {
   tableHead = document.getElementById("tableHead")
   tableRow = document.createElement("tr")
   for (let i = 0; i < keys.length; i++) {
-    capitalizedKey = keys[i].charAt(0).toUpperCase() + keys[i].slice(1)
-    generateAppendCell(capitalizedKey, tableRow, "th")
+    generateAppendCell(formatHeader(keys[i]), tableRow, "th")
   }
   tableHead.appendChild(tableRow)
 }
@@ -57,6 +56,17 @@ function generateAppendCell(text, parentElement, cellType) {
   childElement = document.createElement(cellType);
   childElement.innerHTML = text;
   parentElement.appendChild(childElement);
+}
+
+function formatHeader(headerString){
+  // converts camelcase to spaced words with first letter capitalized
+  // i.e.: camelCase => Camel Case
+  const formatString = headerString
+      .replace(/([A-Z])/g, " $1")
+      .replace(/^./, function (str) {
+        return str.toUpperCase();
+      });
+  return formatString;
 }
 
 // addEventListener("DOMContentLoaded", handleContentLoaded);
