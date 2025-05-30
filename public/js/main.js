@@ -2,19 +2,24 @@ function handleSelectChange() {
   selectElement = document.getElementById("dataSelect");
   console.log(selectElement.value);
   if (selectElement.value == "students") {
-    loadStudents();
+    loadData("students");
   }
-  // TODO: add conditionals to call functions for video games, movies, and restaurants
+  if (selectElement.value == "videogames") {
+    loadData("videogames");
+  }
+  if (selectElement.value == "movies") {
+    loadData("movies");
+  }
+  if (selectElement.value == "resaurants") {
+    loadData("resaurants");
+  }
 }
 
-function loadStudents() {
-  fetch("/api/students")
+function loadData(dataSet) {
+  fetch(`/api/${dataSet}`)
     .then((res) => res.json())
     .then((data) => generateTableBody(data));
 }
-
-// TODO: Add more functions for loading video games, movies, and restaurants
-// OR modify loadStudents to loadData and handle the request dynamically
 
 function generateTableBody(data) {
   console.log(Object.keys(data[0]));
