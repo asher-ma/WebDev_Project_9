@@ -3,7 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 import { students } from "./api/data.js";
-import { videogames } from "./api/data.js";
+import { videoGames } from "./api/data.js";
 import { movies } from "./api/data.js";
 import { bendRestaurants } from "./api/data.js";
 
@@ -19,15 +19,15 @@ app.get("/api/students", (req, res) => {
   res.send(students);
 });
 
-app.get("/api/students", (req, res) => {
-  res.send(videogames);
+app.get("/api/videoGames", (req, res) => {
+  res.send(videoGames);
 });
 
-app.get("/api/students", (req, res) => {
+app.get("/api/movies", (req, res) => {
   res.send(movies);
 });
 
-app.get("/api/students", (req, res) => {
+app.get("/api/bendRestaurants", (req, res) => {
   res.send(bendRestaurants);
 });
 
