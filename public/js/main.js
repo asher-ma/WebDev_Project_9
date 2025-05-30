@@ -26,7 +26,8 @@ function generateTableHead(data) {
   tableHead = document.getElementById("tableHead")
   tableRow = document.createElement("tr")
   for (let i = 0; i < keys.length; i++) {
-    generateAppendCell(keys[i], tableRow, "th")
+    capitalizedKey = keys[i].charAt(0).toUpperCase() + keys[i].slice(1)
+    generateAppendCell(capitalizedKey, tableRow, "th")
   }
   tableHead.appendChild(tableRow)
 }
