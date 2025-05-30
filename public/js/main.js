@@ -23,13 +23,14 @@ function loadData(dataSet) {
 
 function generateTableBody(data) {
   console.log(Object.keys(data[0]));
+  keys = Object.keys(data[0])
   tableBody = document.getElementById("tableContent");
   for (let i = 0; i < data.length; i++) {
     tableRow = document.createElement("tr");
-    generateAppendCell(data[i].name, tableRow);
-    generateAppendCell(data[i].major, tableRow);
-    generateAppendCell(data[i].clubs.join(", "), tableRow);
-    generateAppendCell(data[i].gpa, tableRow);
+    generateAppendCell(data[i].keys[0], tableRow);
+    generateAppendCell(data[i].keys[1], tableRow);
+    generateAppendCell(data[i].keys[2].join(", "), tableRow);
+    generateAppendCell(data[i].keys[3], tableRow);
     tableBody.appendChild(tableRow);
   }
 }
