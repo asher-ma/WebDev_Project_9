@@ -10,15 +10,16 @@ function handleSelectChange() {
   if (selectElement.value == "movies") {
     loadData("movies");
   }
-  if (selectElement.value == "resaurants") {
-    loadData("resaurants");
+  if (selectElement.value == "restaurants") {
+    loadData("restaurants");
   }
 }
 
 function loadData(dataSet) {
+  // TODO: reset table
   fetch(`/api/${dataSet}`)
     .then((res) => res.json())
-    .then((data) => generateTableBody(data));
+    .then((data) => {generateTableHead(data), generateTableBody(data)});
 }
 
 function generateTableHead(data) {
@@ -36,15 +37,15 @@ function generateTableBody(data) {
   tableBody = document.getElementById("tableContent");
   for (let i = 0; i < data.length; i++) {
     tableRow = document.createElement("tr");
-    generateAppendCell(data[i].keys[0], tableRow, "td");
-    generateAppendCell(data[i].keys[1], tableRow, "td");
+    generateAppendCell(data[i][keys[0]], tableRow, "td");
+    generateAppendCell(data[i][keys[1]], tableRow, "td");
     // if (data == "students") {
     //   generateAppendCell(data[i].keys[2].join(", "), tableRow, "td");
     // } else {
     //   generateAppendCell(data[i].keys[2], tableRow, "td");
     // }
-    generateAppendCell(data[i].keys[2].join(", "), tableRow, "td");
-    generateAppendCell(data[i].keys[3], tableRow, "td");
+    generateAppendCell(data[i][keys[2]].join(", "), tableRow, "td");
+    generateAppendCell(data[i][keys[3]], tableRow, "td");
     // if (data == "movies") {
     //   generateAppendCell(data[i].keys[4].join(", "), tableRow, "td");
     // }
