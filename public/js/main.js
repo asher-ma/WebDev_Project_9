@@ -25,6 +25,7 @@ function loadData(dataSet) {
 function generateTableHead(data) {
   keys = Object.keys(data[0])
   tableHead = document.getElementById("tableHead")
+  tableHead.innerHTML = ""
   tableRow = document.createElement("tr")
   for (let i = 0; i < keys.length; i++) {
     generateAppendCell(formatHeader(keys[i]), tableRow, "th")
@@ -35,6 +36,7 @@ function generateTableHead(data) {
 function generateTableBody(data) {
   keys = Object.keys(data[0])
   tableBody = document.getElementById("tableContent");
+  tableBody.innerHTML = ""
   for (let i = 0; i < data.length; i++) {
     tableRow = document.createElement("tr");
     generateAppendCell(data[i][keys[0]], tableRow, "td");
