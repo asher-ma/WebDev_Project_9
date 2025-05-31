@@ -4,19 +4,18 @@ function handleSelectChange() {
   if (selectElement.value == "students") {
     loadData("students");
   }
-  if (selectElement.value == "videogames") {
-    loadData("videogames");
+  if (selectElement.value == "games") {
+    loadData("videoGames");
   }
   if (selectElement.value == "movies") {
     loadData("movies");
   }
   if (selectElement.value == "restaurants") {
-    loadData("restaurants");
+    loadData("bendRestaurants");
   }
 }
 
 function loadData(dataSet) {
-  // TODO: reset table
   fetch(`/api/${dataSet}`)
     .then((res) => res.json())
     .then((data) => {generateTableHead(data), generateTableBody(data, dataSet)});
