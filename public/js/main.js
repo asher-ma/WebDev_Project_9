@@ -19,7 +19,7 @@ function loadData(dataSet) {
   // TODO: reset table
   fetch(`/api/${dataSet}`)
     .then((res) => res.json())
-    .then((data) => {generateTableHead(data), generateTableBody(data)});
+    .then((data) => {generateTableHead(data), generateTableBody(data, dataSet)});
 }
 
 function generateTableHead(data) {
@@ -33,7 +33,7 @@ function generateTableHead(data) {
   tableHead.appendChild(tableRow)
 }
 
-function generateTableBody(data) {
+function generateTableBody(data, dataSet) {
   keys = Object.keys(data[0])
   tableBody = document.getElementById("tableContent");
   tableBody.innerHTML = ""
@@ -41,16 +41,15 @@ function generateTableBody(data) {
     tableRow = document.createElement("tr");
     generateAppendCell(data[i][keys[0]], tableRow, "td");
     generateAppendCell(data[i][keys[1]], tableRow, "td");
-    // if (data == "students") {
-    //   generateAppendCell(data[i].keys[2].join(", "), tableRow, "td");
-    // } else {
-    //   generateAppendCell(data[i].keys[2], tableRow, "td");
-    // }
-    generateAppendCell(data[i][keys[2]].join(", "), tableRow, "td");
+    if (dataSet == "students") {
+      generateAppendCell(data[i][keys[2]].join(", "), tableRow, "td");
+    } else {
+      generateAppendCell(data[i][keys[2]], tableRow, "td");
+    }
     generateAppendCell(data[i][keys[3]], tableRow, "td");
-    // if (data == "movies") {
-    //   generateAppendCell(data[i].keys[4].join(", "), tableRow, "td");
-    // }
+    if (dataSet == "movies") {
+      generateAppendCell(data[i][keys[4]].join(", "), tableRow, "td");
+    }
     tableBody.appendChild(tableRow);
   }
 }
